@@ -1,0 +1,203 @@
+/* ==========================
+   TYLER OS
+   Futuristic Portfolio
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#04070f;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at 20% 20%, rgba(0,255,255,.15), transparent 40%),
+    radial-gradient(circle at 80% 40%, rgba(0,140,255,.12), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(0,255,170,.08), transparent 35%);
+    animation:bgMove 20s infinite alternate;
+    z-index:-2;
+}
+
+@keyframes bgMove{
+    from{
+        transform:translateY(0) scale(1);
+    }
+
+    to{
+        transform:translateY(-60px) scale(1.2);
+    }
+}
+
+/* Canvas */
+
+#bg{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+/* Navigation */
+
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter:blur(12px);
+    background:rgba(0,0,0,.35);
+    border-bottom:1px solid rgba(0,255,255,.2);
+    z-index:100;
+}
+
+.logo{
+    font-family:Orbitron,sans-serif;
+    font-size:30px;
+    color:#00eaff;
+    text-shadow:0 0 15px #00eaff;
+}
+
+.logo span{
+    color:white;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00eaff;
+}
+
+/* Hero */
+
+header{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero{
+    text-align:center;
+}
+
+.hero h1{
+    font-family:Orbitron,sans-serif;
+    font-size:70px;
+    line-height:1.2;
+}
+
+.hero span{
+    color:#00eaff;
+    text-shadow:0 0 25px cyan;
+}
+
+#typing{
+    margin-top:25px;
+    font-size:22px;
+    color:#cccccc;
+    min-height:40px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:45px;
+    padding:16px 40px;
+    border-radius:40px;
+    border:2px solid #00eaff;
+    color:#00eaff;
+    text-decoration:none;
+    transition:.35s;
+}
+
+.btn:hover{
+    background:#00eaff;
+    color:black;
+    box-shadow:0 0 30px #00eaff;
+}
+
+/* Sections */
+
+section{
+    padding:120px 10%;
+}
+
+section h2{
+    font-family:Orbitron,sans-serif;
+    font-size:40px;
+    color:#00eaff;
+    margin-bottom:40px;
+}
+
+/* Glass Cards */
+
+.glass{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(0,255,255,.25);
+    backdrop-filter:blur(16px);
+    border-radius:25px;
+    padding:40px;
+    transition:.4s;
+}
+
+.glass:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 35px rgba(0,234,255,.4);
+}
+
+/* Skills */
+
+.skills{
+    display:grid;
+    gap:25px;
+}
+
+.skill{
+    font-size:18px;
+}
+
+.bar{
+    margin-top:10px;
+    width:100%;
+    height:12px;
+    background:#1a1a1a;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.bar span{
+    display:block;
+    height:100%;
+    background:linear-gradient(90deg,#00eaff,#00ff99);
+    border-radius:20px;
+}
